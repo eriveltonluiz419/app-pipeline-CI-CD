@@ -30,4 +30,4 @@ jobs:
         version: v1.64
 
     - name: Test
-      run: go test -v main_test.go
+      run: DB_HOST=${{ }} DB_PASSWORD=${{ }} DB_USER=${{ }} DB_NAME=${{ }} DB_PORT=${{ }} go test -v main_test.go
