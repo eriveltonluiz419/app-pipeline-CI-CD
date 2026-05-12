@@ -53,3 +53,7 @@ jobs:
       with:
         name: projeto_compilado
         path: main
+
+  docker:
+    needs: build
+    uses: ./.github/workflows/Docker.yml
