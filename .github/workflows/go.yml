@@ -53,5 +53,5 @@ jobs:
         path: main
 
   docker:
-    - needs: build
-    - uses: ./.github/workflows/Docker.yml
+    needs: build
+    uses: ./.github/workflows/Docker.yml
