@@ -34,8 +34,6 @@ jobs:
 
     - name: Test
       run: DB_HOST=${{ secrets.DB_HOST }} DB_PASSWORD=${{ secrets.DB_PASSWORD }} DB_USER=${{ secrets.DB_USER }} DB_NAME=${{ secrets.DB_NAME }} DB_PORT=${{ secrets.DB_PORT }} go test -v main_test.go
-
-
   
   build:
     needs: test
@@ -55,5 +53,5 @@ jobs:
         path: main
 
   docker:
-    needs: build
-    uses: ./.github/workflows/Docker.yml
+    - needs: build
+    - uses: ./.github/workflows/Docker.yml
