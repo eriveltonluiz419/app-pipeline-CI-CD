@@ -41,7 +41,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: go build main.go
+      run: go build -v main.go
     
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
